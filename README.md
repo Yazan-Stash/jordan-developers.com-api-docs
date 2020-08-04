@@ -104,3 +104,5 @@ All requests MUST include a valid `User-Agent` header containing a valid, workin
 
 ## Endpoints
 For easier integration, a [Postman](https://www.postman.com) collection is provided [here](postman-collection.json), you'll find a list of all the API endpoints, in addition to a sample request, sample response for each one.
+
+#### Disclaimer: this document was heavily (like really heavily) inspired by Github's own V3 API overview.
