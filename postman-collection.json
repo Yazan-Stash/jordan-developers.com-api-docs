@@ -1,0 +1,651 @@
+{
+	"info": {
+		"_postman_id": "8b98214a-3452-40d7-b284-0908cfb759b9",
+		"name": "Jordan Developers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "View Docs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "{{email_address}}",
+						"description": "An email I can contact in case something needs to be communicated.",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://jordan-developers.com/api/v1/docs",
+					"protocol": "https",
+					"host": [
+						"jordan-developers",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"docs"
+					]
+				},
+				"description": "Use this endpoint to get a link for the docs url.\n\n_Note_: if you omit the accepts JSON header (ie. visit the endpoint from a browser), you'll be automatically redirected there."
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{email_address}}",
+								"description": "An email I can contact in case something need to be communicated.",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://jordan-developers.com/api/v1/docs",
+							"protocol": "https",
+							"host": [
+								"jordan-developers",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"docs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Aug 2020 19:25:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "0461af67150000078245a76200000001"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "5be2e81e8da80782-LHR"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"url\": \"https://github.com/Yazan-Stash/jordan-developers.com-api-docs/blob/master/README.md\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "List Jobs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "{{email_address}}",
+						"description": "An email I can contact in case something needs to be communicated.",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://jordan-developers.com/api/v1/jobs?page=1",
+					"protocol": "https",
+					"host": [
+						"jordan-developers",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jobs"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "[optional] Used to \"scroll\" through pages."
+						}
+					]
+				},
+				"description": "Use this endpoint to get a paginated list of job postings."
+			},
+			"response": [
+				{
+					"name": "Successful Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{email_address}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://jordan-developers.com/api/v1/jobs",
+							"protocol": "https",
+							"host": [
+								"jordan-developers",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Aug 2020 19:32:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "0461b50d240000078245b47200000001"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "5be2f1283c460782-LHR"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 120,\n            \"title\": \"Senior/Lead C# .NET/Angular Developer\",\n            \"published_at\": \"2020-08-02 14:00:00\",\n            \"tags\": [\n                \".NET\"\n            ],\n            \"company\": {\n                \"name\": \"Capella Solutions\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/aCCtOvE4jPHQHRYdbSZgUdrrnN8OUcVT3k2HDgQh\"\n            }\n        },\n        {\n            \"id\": 111,\n            \"title\": \"Back End Developer\",\n            \"published_at\": \"2020-07-25 09:00:00\",\n            \"tags\": [\n                \".NET\"\n            ],\n            \"company\": {\n                \"name\": \"TenTime\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/Mgz6lur8FkxlJRPexoICCVOCvY9uYyOy1t1qCktf\"\n            }\n        },\n        {\n            \"id\": 112,\n            \"title\": \"DevOps Engineer\",\n            \"published_at\": \"2020-07-25 09:00:00\",\n            \"tags\": [\n                \"DevOps\"\n            ],\n            \"company\": {\n                \"name\": \"TenTime\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/Mgz6lur8FkxlJRPexoICCVOCvY9uYyOy1t1qCktf\"\n            }\n        },\n        {\n            \"id\": 113,\n            \"title\": \"Frontend Developer (TV Apps)\",\n            \"published_at\": \"2020-07-25 09:00:00\",\n            \"tags\": [\n                \"Frontend\"\n            ],\n            \"company\": {\n                \"name\": \"TenTime\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/Mgz6lur8FkxlJRPexoICCVOCvY9uYyOy1t1qCktf\"\n            }\n        },\n        {\n            \"id\": 114,\n            \"title\": \"Android Developer\",\n            \"published_at\": \"2020-07-25 09:00:00\",\n            \"tags\": [\n                \"Android\"\n            ],\n            \"company\": {\n                \"name\": \"TenTime\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/Mgz6lur8FkxlJRPexoICCVOCvY9uYyOy1t1qCktf\"\n            }\n        },\n        {\n            \"id\": 115,\n            \"title\": \"Frontend Web Developer\",\n            \"published_at\": \"2020-07-25 09:00:00\",\n            \"tags\": [\n                \"Frontend\",\n                \"Angular\"\n            ],\n            \"company\": {\n                \"name\": \"TenTime\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/Mgz6lur8FkxlJRPexoICCVOCvY9uYyOy1t1qCktf\"\n            }\n        },\n        {\n            \"id\": 116,\n            \"title\": \"iOS Developer\",\n            \"published_at\": \"2020-07-25 09:00:00\",\n            \"tags\": [\n                \"iOS\"\n            ],\n            \"company\": {\n                \"name\": \"TenTime\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/Mgz6lur8FkxlJRPexoICCVOCvY9uYyOy1t1qCktf\"\n            }\n        },\n        {\n            \"id\": 117,\n            \"title\": \"iOS Developer\",\n            \"published_at\": \"2020-07-23 09:00:00\",\n            \"tags\": [\n                \"iOS\"\n            ],\n            \"company\": {\n                \"name\": \"Genie9\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/NhFdDScbVFPm5keIpGe9pNvhgJXfqKCR7kDj8sfx\"\n            }\n        },\n        {\n            \"id\": 108,\n            \"title\": \"Game Developer\",\n            \"published_at\": \"2020-07-22 09:00:00\",\n            \"tags\": [\n                \"React Native\"\n            ],\n            \"company\": {\n                \"name\": \"Adam Wa Mishmish\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/DQ6Xzzm6RdxYWbpBgBadO90J8DxgE3F2dEmotnI8\"\n            }\n        },\n        {\n            \"id\": 109,\n            \"title\": \".NET Full Stack Developer\",\n            \"published_at\": \"2020-07-22 09:00:00\",\n            \"tags\": [\n                \".NET\"\n            ],\n            \"company\": {\n                \"name\": \"V-tech\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/EmpOEUsLLrLLI8CMsHPigA527sg9oPN2Is2CkGHd\"\n            }\n        },\n        {\n            \"id\": 110,\n            \"title\": \"Mindex Developer\",\n            \"published_at\": \"2020-07-22 09:00:00\",\n            \"tags\": [],\n            \"company\": {\n                \"name\": \"Creative Path\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/Kbg2J919WX6QAIaWoJvphXvh8bixXKaHyOctj9ke\"\n            }\n        },\n        {\n            \"id\": 119,\n            \"title\": \"iOS Developer\",\n            \"published_at\": \"2020-07-22 09:00:00\",\n            \"tags\": [\n                \"iOS\"\n            ],\n            \"company\": {\n                \"name\": \"BeMotion Inc\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/WZnLM3qyzupHStW9N1ZPls654ZLEEclxDC0Kdq1G\"\n            }\n        },\n        {\n            \"id\": 118,\n            \"title\": \"Database Developer\",\n            \"published_at\": \"2020-07-21 09:00:00\",\n            \"tags\": [\n                \"Database\"\n            ],\n            \"company\": {\n                \"name\": \"MadfooatCom\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/vmtCaLOupoB2iFnN48lbrKiqohLZG88gtcCx9Nue\"\n            }\n        },\n        {\n            \"id\": 106,\n            \"title\": \"Web Development Lead\",\n            \"published_at\": \"2020-07-18 07:00:00\",\n            \"tags\": [\n                \"PHP\",\n                \"Ruby\"\n            ],\n            \"company\": {\n                \"name\": \"Chain Reaction\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/mUChthuXVj3OqehWVrr76dxJY0DrVWCUtkJz6yBc\"\n            }\n        },\n        {\n            \"id\": 107,\n            \"title\": \"Senior Team Lead\",\n            \"published_at\": \"2020-07-17 09:00:00\",\n            \"tags\": [],\n            \"company\": {\n                \"name\": \"Uber\",\n                \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/1JiOK4LZFrkHHUhDDvO7zzwto2zgyz2zVlb3ffeQ\"\n            }\n        }\n    ],\n    \"links\": {\n        \"first\": \"https://jordan-developers.com/api/v1/jobs?page=1\",\n        \"last\": \"https://jordan-developers.com/api/v1/jobs?page=8\",\n        \"prev\": null,\n        \"next\": \"https://jordan-developers.com/api/v1/jobs?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 8,\n        \"path\": \"https://jordan-developers.com/api/v1/jobs\",\n        \"per_page\": 15,\n        \"to\": 15,\n        \"total\": 120\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Show Job Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "{{email_address}}",
+						"description": "An email I can contact in case something needs to be communicated.",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://jordan-developers.com/api/v1/jobs/{{job_id}}",
+					"protocol": "https",
+					"host": [
+						"jordan-developers",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"{{job_id}}"
+					]
+				},
+				"description": "Use this endpoint to view details about a job posting, including the full job description and requirements.\n\nKeep in mind, the description is an HTML string and should be rendered accordingly."
+			},
+			"response": [
+				{
+					"name": "Successful Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{email_address}}",
+								"description": "An email I can contact in case something needs to be communicated.",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://jordan-developers.com/api/v1/jobs/{{job_id}}",
+							"protocol": "https",
+							"host": [
+								"jordan-developers",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"{{job_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Aug 2020 19:43:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "0461bf849f0000078245a37200000001"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "5be301e768170782-LHR"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"React Native Develoepr\",\n        \"description\": \"<h1><strong>Requirements</strong></h1><ul><li>BS/MS degree in Computer Science, Software Engineering or a related subject</li><li>Personal commitment to continuously learn and improve.</li><li>Strong Javascript background; React Native, Redux, React-JS, ES6.</li><li>Experience with RESTful APIs and JSON datatype.</li><li>Familiarity with native build tools, like XCode, Gradle and Android Studio.</li><li>UX Design experience is a <em>bonus</em>.</li></ul><div><br>*Please indicate the position title in the email subject.</div><div><br></div><div><br></div>\",\n        \"published_at\": \"2019-12-25 17:00:00\",\n        \"tags\": [\n            \"React\",\n            \"React Native\",\n            \"Javascript\"\n        ],\n        \"company\": {\n            \"name\": \"Edraak\",\n            \"logo_url\": \"https://jordan-developers.com/storage/company_avatars/MOJ89O1f5iXiwxdJcj2ZGiE0HxCBjFW8HwYMM88P.png\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Apply For Job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "{{email_address}}",
+						"description": "An email I can contact in case something needs to be communicated.",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://jordan-developers.com/api/v1/jobs/{{job_id}}/apply",
+					"protocol": "https",
+					"host": [
+						"jordan-developers",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"{{job_id}}",
+						"apply"
+					]
+				},
+				"description": "Use this endpoint to get info on \"how to apply\", response type could be one of two:\n- email: the posting's favorite way for applications is an email, you should take this value and open the Mail client with the address in the \"to\" field.\n- redirect: the posting has a page that applicants can apply through, you should redirect/open the link in a webview/browser.\n\n_Note_: please consider adding \"Applied through jordan-developers.com\" to the end of the mail body field when opening it natively.\n\nResponse `StatusCode` will be `201 Created` upon a successful request."
+			},
+			"response": [
+				{
+					"name": "Type Email - Successful Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{email_address}}",
+								"description": "An email I can contact in case something needs to be communicated.",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://jordan-developers.com/api/v1/jobs/{{job_id}}/apply",
+							"protocol": "https",
+							"host": [
+								"jordan-developers",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"{{job_id}}",
+								"apply"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Aug 2020 19:52:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "0461c7f4a20000005bac351200000001"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "5be30f67688c005b-LHR"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"type\": \"email\",\n        \"url\": \"recruitment@edraak.org\"\n    }\n}"
+				},
+				{
+					"name": "Type Redirect - Successful Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{email_address}}",
+								"description": "An email I can contact in case something needs to be communicated.",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://jordan-developers.com/api/v1/jobs/{{job_id}}/apply",
+							"protocol": "https",
+							"host": [
+								"jordan-developers",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"{{job_id}}",
+								"apply"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Aug 2020 19:53:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "0461c8a0ff0000005bac1d3200000001"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "5be3107b3cb7005b-LHR"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"type\": \"redirect\",\n        \"url\": \"https://www.linkedin.com/jobs/view/1628473857\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
